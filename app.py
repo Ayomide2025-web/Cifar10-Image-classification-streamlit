@@ -42,7 +42,7 @@ if uploaded_file is not None:
   img_array = np.array(image) / 255.0
   img_array = np.expand_dims(img_array, axis=0)
   with st.spinner("Analyzing image..."):
-  prediction = model.predict(img_array, verbose=0)
+    prediction = model.predict(img_array, verbose=0)
   predicted_index = np.argmax(prediction)
   predicted_class = class_names[predicted_index]
   confidence = np.max(prediction)
